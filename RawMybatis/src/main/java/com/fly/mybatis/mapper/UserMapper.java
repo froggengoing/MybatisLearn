@@ -1,23 +1,19 @@
 package com.fly.mybatis.mapper;
 
 import com.fly.mybatis.model.FyUser;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.ibatis.annotations.Insert;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 /**
  * @author fly
  * @create 2024-04-29-12:02
  **/
-public interface UserMapper {
+public interface UserMapper extends BaseMapper {
 
-    List<FyUser>  getList(FyUser user);
+    List<FyUser> getList(FyUser user);
 
-    @Select("SELECT * FROM atp_user WHERE id = #{id}")
-    FyUser selectUser(int id);
+
+    @Insert("Insert into  atp_test_user(id,email) values (#{id},#{email})")
+    int insert(FyUser user);
 }

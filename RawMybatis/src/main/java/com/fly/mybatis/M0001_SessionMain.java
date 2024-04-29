@@ -16,7 +16,7 @@ import java.util.List;
  * @author fly
  * @create 2024-04-29-11:26
  **/
-public class MybatisMain {
+public class M0001_SessionMain {
 
 
     public static void main(String[] args) throws IOException {
